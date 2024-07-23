@@ -1,6 +1,6 @@
 # StateAgent
 
-This project demonstrates a multi-agent system where a Project Manager (PM) agent creates a dynamic team of agents to accomplish a given task. Each agent is assigned a specific role and task, and the PM agent evaluates the feasibility of each agent completing their assigned task using a language model (LLM) like OpenAI's GPT-4.
+This project demonstrate a multi-agent system comprising a Project Manager (PM) and and dynamically generated agent team to accomplish a given task. Each agent is designed to have finite state machine based on different roles. PM Agent consist of states: START, RECEIVE_TASK, ASSIGN_AGENTS, REASSIGN_AGENTS, COMPLETE_TASK and any other agent consist of states: THOUGHT, ACTION, OBSERVE, ANSWER states. A task is received by PM Agent, which trigger to generate and assign agents. Then each agent will run in order while self-observing the feasibility. If the feasibility is lower than a threashold value, then the Agent's state will change to THOUGHT and inform PM Agent, which would change the state to REASSING_AGENTS. Then the tasks are re-routes and agents are re-assigned.
 
 ![Proposed Model](/model.png "Proposed Model")
 ## Project Structure
