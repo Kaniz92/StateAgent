@@ -2,6 +2,7 @@
 
 This project demonstrates a multi-agent system where a Project Manager (PM) agent creates a dynamic team of agents to accomplish a given task. Each agent is assigned a specific role and task, and the PM agent evaluates the feasibility of each agent completing their assigned task using a language model (LLM) like OpenAI's GPT-4.
 
+![Proposed Model](/model.jpg "Proposed Model"))
 ## Project Structure
 
 - `Agent`: A class representing an individual agent with attributes for name, description, task, and feasibility.
@@ -34,7 +35,7 @@ This project demonstrates a multi-agent system where a Project Manager (PM) agen
 
 ## Usage
 
-    run run_agent_hub.py
+run the run_agent_hub.py
 
 ## References
 
