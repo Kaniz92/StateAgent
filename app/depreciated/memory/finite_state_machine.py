@@ -1,12 +1,11 @@
 import json
-from pydantic import BaseModel
-from typing import List, Generic, TypeVar, Dict
+from typing import List, Dict
 from abc import ABC, abstractmethod
-from app.llm.llama_cpp import LLM
-from app.memory.global_memory import Memory
-from app.tool.ToolAdapter import ToolAdapter
-from app.memory.message_state import MemoryState, Message
-from app.memory.context import Context
+from app.depreciated.llm.llama_cpp import LLM
+from app.depreciated.memory.global_memory import Memory
+from app.depreciated.tool.ToolAdapter import ToolAdapter
+from app.depreciated.memory.message_state import MemoryState, Message
+from app.depreciated.memory.context import Context
 
 class StateAdapter(ABC):
     @abstractmethod
@@ -75,7 +74,7 @@ class Thought(StateAdapter):
         else:
             parse_answer = response.split('Thought:')[1]
             context.memory.add_entry(Message(parse_answer, MemoryState.THOUGHT))
-            return MemoryState.ACTION # TODO: is this state return is correct????
+            return MemoryState.THOUGHT # TODO: is this state return is correct????
 
 
 class Action(StateAdapter):

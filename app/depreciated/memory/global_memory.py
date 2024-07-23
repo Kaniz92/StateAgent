@@ -1,5 +1,6 @@
-from app.memory.message_state import Message
-from typing import List, Generic, TypeVar, Dict
+from app.depreciated.memory.message_state import Message
+from typing import List
+
 
 class Memory:
     def __init__(self):

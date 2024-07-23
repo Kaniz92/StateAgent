@@ -1,8 +1,6 @@
 from pydantic import Field
-from abc import ABC, abstractmethod
-from typing import List, Generic, TypeVar, Dict
 from pydantic import BaseModel
-from app.tool.ToolAdapter import ToolAdapter
+from app.depreciated.tool.ToolAdapter import ToolAdapter
 
 
 class StockTickerPriceInput(BaseModel):

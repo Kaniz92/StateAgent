@@ -1,8 +1,7 @@
-from app.llm.llama_cpp import LLM
-from app.memory.global_memory import Memory
-from app.tool.ToolAdapter import ToolAdapter
-from app.memory.message_state import MemoryState
-from typing import List, Generic, TypeVar, Dict
+from app.depreciated.llm.llama_cpp import LLM
+from app.depreciated.memory.global_memory import Memory
+from app.depreciated.tool.ToolAdapter import ToolAdapter
+from typing import List
 
 
 class Context:
